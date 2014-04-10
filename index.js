@@ -47,7 +47,7 @@ var pagination = function(opts) {
             colName, file, filePath;
 
         for (file in files) {
-            colName = files[file].pagiante;
+            colName = files[file].paginate;
             filePath = opts.path;
             if (colName) {
                 paginate(filePath, collections[colName], file, files);
