@@ -1,0 +1,23 @@
+{
+  "name": "metalsmith-paginate",
+  "version": "0.1.0",
+  "description": "A simple plugin that uses metalsmith-collection to create a paginated collection",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "metalsmith",
+    "plugin"
+  ],
+  "author": "Robin Thrift <thrift.d.robin@googlemail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^1.18.2",
+    "should": "^3.3.0",
+    "metalsmith-collections": "^0.4.0"
+  },
+  "dependencies": {
+    "lodash.clone": "^2.4.1"
+  }
+}
