@@ -6,6 +6,9 @@
   "scripts": {
     "test": "mocha"
   },
+  "homepage": "https://github.com/RobinThrift/metalsmith-paginate",
+  "issues": "https://github.com/RobinThrift/metalsmith-paginate/issues",
+  "repository": "https://github.com/RobinThrift/metalsmith-paginate.git",
   "keywords": [
     "metalsmith",
     "plugin"
