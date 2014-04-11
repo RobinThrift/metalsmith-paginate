@@ -49,7 +49,7 @@ Metalsmith(__dirname)
 | name | description |
 |:-----|:------------|
 |perPage|The number of items to be displayed per page|
-|path|The path were the files will be outputted to. Appended with "-$NUM.html" where $NUM is the page number. So "blog/page" would for example result in the second page being rendered as `blog/page-2.html`|
+|path|The path were the files will be outputted to. Appended with "-$NUM.html" where $NUM is the page number. So "blog/page" would for example result in the second page being rendered as `blog/page-2.html`. You can also use the placeholder ':collection' to insert the name of the collection.|
 
 
 ##Templates

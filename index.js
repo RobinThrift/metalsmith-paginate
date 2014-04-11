@@ -50,6 +50,10 @@ var pagination = function(opts) {
             colName = files[file].paginate;
             filePath = opts.path;
             if (colName) {
+                if (filePath) {
+                    filePath = filePath.replace(':collection', colName);
+                }
+                
                 paginate(filePath, collections[colName], file, files);
             }
         }
