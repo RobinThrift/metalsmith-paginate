@@ -1,6 +1,6 @@
 {
   "name": "metalsmith-paginate",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A simple plugin that uses metalsmith-collections to create a paginated collection",
   "main": "index.js",
   "scripts": {
