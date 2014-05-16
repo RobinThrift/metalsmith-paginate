@@ -13,7 +13,8 @@ describe('Paginate', function() {
     beforeEach(function(done) {
         files = {
             'blog.md': {
-                paginate: 'posts'
+                paginate: 'posts',
+                sidebar: new Buffer("I'm a sidebar content"),
             }
         }
 
@@ -70,5 +71,22 @@ describe('Paginate', function() {
         });
     });
 
+    it('takes care of Buffer properties while creating the virtual file for pagination', function (done) {
+        paginate({
+            perPage: 2,
+            path: ':collection/page'
+        })(files, metalsmith, function() {
+            var fileObj;
 
+            for (var file in files) {
+                if (/(posts\/page-[0-9]+)/.test(file)) {
+                    fileObj = files[file];
+                    should(fileObj).have.property('sidebar');
+                    should(fileObj.sidebar).not.equal(files['blog.md'].sidebar);
+                    should(Buffer.isBuffer(fileObj.sidebar)).ok;
+                }
+            }
+            done();
+        });
+    });
 });
